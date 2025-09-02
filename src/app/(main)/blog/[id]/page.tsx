@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Blog Post",
 };
 
-export default async function BlogDetailPage({ params }: { params: { id: string } }) {
+export default async function BlogDetailPage({ params }: { params: Promise<{ id: string }> }) {
 
     const { id } = await params;
 
